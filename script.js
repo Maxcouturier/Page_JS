@@ -16,11 +16,12 @@ footer[0].addEventListener('click', function(){
 
 // Fonctionnalité 2 :
 
-let navbar = document.getElementsByClassName("navbar-toggler")[0];
-navbar.addEventListener('click', function(){
-navbar.classList.toggle("collapse");
+let hamburger = document.getElementsByClassName("navbar-toggler")[0];
+let navbarHeader = document.getElementById("navbarHeader");
+
+hamburger.addEventListener("click", function(){
+    navbarHeader.classList.toggle("collapse");
 });
-console.log(navbar.className)
 
 // Fonctionnalité 3 :
 
@@ -44,5 +45,30 @@ if (secondCard.style.color === 'green') {
 });
 
 
-
 // Fonctionnalité 5 :
+
+let navbar = document.getElementsByClassName("navbar")[0];
+let bootstrap = document.getElementsByTagName('link')[0];
+
+console.log(bootstrap);
+
+	navbar.addEventListener("dblclick", destroyCDN);
+
+	function destroyCDN() {
+		if  (bootstrap.rel == "stylesheet") { 
+			bootstrap.rel = "styleDisabled";
+		} else {
+			bootstrap.rel = "stylesheet";
+		}
+		};
+
+// Fonctionnalité 6 :
+
+let card = document.getElementsByClassName("card")[0];
+card.addEventListener('mouseover', function(){
+  var image = document.getElementsByClassName("card-img-top")[0]
+  image.style.width = '80%';
+});
+
+
+// Fonctionnalité 7 :
