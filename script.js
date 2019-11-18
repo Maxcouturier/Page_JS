@@ -64,11 +64,19 @@ console.log(bootstrap);
 
 // Fonctionnalité 6 :
 
-let card = document.getElementsByClassName("card")[0];
-card.addEventListener('mouseover', function(){
-  var image = document.getElementsByClassName("card-img-top")[0]
-  image.style.width = '80%';
-});
+let viewLength = document.getElementsByClassName("btn-success").length
+
+for (let i = 0; i < viewLength; i++) {
+
+	let btnView = document.getElementsByClassName("btn-success");
+
+	btnView[i].addEventListener("mouseover", Fonction1);
+
+	function Fonction1() {
+		document.getElementsByClassName("card-text")[i].classList.toggle("d-none"); //d-none on enleve le texte
+		document.getElementsByClassName("card-img-top")[i].style.width = '80%';
+	};
+};
 
 
 // Fonctionnalité 7 :
